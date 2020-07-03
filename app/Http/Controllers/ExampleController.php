@@ -65,8 +65,8 @@ class ExampleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $example  = Example::findOrFail($id);
         try {
+            $example  = Example::findOrFail($id);
             $validator = IlluminateValidator::make($request->all(), Example::$rule);
             if ($validator->fails()) {
                 return response()->json($validator->errors());
