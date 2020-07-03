@@ -21,4 +21,5 @@ $api->version('v1', function ($api) {
         $api->post('me', 'AuthController@me');
         $api->post('signup', 'AuthController@signup');
     });
+    $api->resource('example', 'App\Http\Controllers\ExampleController');
 });
